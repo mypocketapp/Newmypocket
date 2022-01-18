@@ -7,19 +7,23 @@ namespace Newmypocket
 {
     public partial class frmSite : Form
     {
+        // variables used to send infomation to other forms
         public static string PassButton = "";
         public static string PassValue = "";
         public static int NextSite = 0;
+
         public frmSite()
         {
             InitializeComponent();
         }
 
+        // Calls UpdateId() when forms opens
         private void frmSite_Load(object sender, EventArgs e)
         {
             UpdateId();
         }
-
+        
+        // Calls FindName() when user clicks on btnCheckName.
         private void btnCheckName_Click(object sender, EventArgs e)
         {
             FindName();

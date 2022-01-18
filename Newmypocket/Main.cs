@@ -10,6 +10,7 @@ namespace Newmypocket
             InitializeComponent();
         }
 
+        // Shows the Heading buttons Form
         private void btnButton_Click(object sender, EventArgs e)
         {
             frmButton frm = new frmButton();
@@ -17,6 +18,7 @@ namespace Newmypocket
             frm.Show();
         }
 
+        // Shows the Site infomation Form
         private void btnSite_Click(object sender, EventArgs e)
         {
             frmSite frm = new frmSite();
@@ -24,6 +26,7 @@ namespace Newmypocket
             frm.Show();
         }
 
+        // Shows the Product infomation Form
         private void btnProducts_Click(object sender, EventArgs e)
         {
             frmProducts frm = new frmProducts();
@@ -31,6 +34,7 @@ namespace Newmypocket
             frm.Show();
         }
 
+        // Shows which product in each store
         private void btnInStore_Click(object sender, EventArgs e)
         {
             frmProductStore frm = new frmProductStore();
@@ -38,6 +42,7 @@ namespace Newmypocket
             frm.Show();
         }
 
+        // Shows the form to display the output of the buttons headings and stores under each heading
         private void btnCheck_Click(object sender, EventArgs e)
         {
             frmCheck frm = new frmCheck();
@@ -45,6 +50,7 @@ namespace Newmypocket
             frm.Show();
         }
 
+        // button that closes the app
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
