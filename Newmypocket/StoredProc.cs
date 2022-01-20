@@ -254,6 +254,26 @@ namespace Newmypocket
             string output = Convert.ToString(dataaccess.ExecuteScalar(comm));
             return output;
         }
+
+        public static string CheckFullName(string Name)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandType = CommandType.StoredProcedure;
+            comm.CommandText = "FindName";
+            comm.Parameters.Add("@Name", MySqlDbType.VarChar).Value = Name;
+            string output = Convert.ToString(dataaccess.ExecuteScalar(comm));
+            return output;
+        }
+
+        public static string URLName(string Name)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandType = CommandType.StoredProcedure;
+            comm.CommandText = "FindURL";
+            comm.Parameters.Add("@URL", MySqlDbType.VarChar).Value = Name;
+            string output = Convert.ToString(dataaccess.ExecuteScalar(comm));
+            return output;
+        }
     }
 
    

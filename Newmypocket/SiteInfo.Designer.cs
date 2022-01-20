@@ -130,6 +130,7 @@ namespace Newmypocket
             this.txtButtonNo.Name = "txtButtonNo";
             this.txtButtonNo.Size = new System.Drawing.Size(100, 20);
             this.txtButtonNo.TabIndex = 9;
+            this.txtButtonNo.Text = "0";
             // 
             // txtButtonName
             // 

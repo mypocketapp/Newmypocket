@@ -29,51 +29,74 @@ namespace Newmypocket
             FindName();
         }
 
+        // calls FindUrl() when user clicks on btnCheckUEl
         private void btnCheckUEL_Click(object sender, EventArgs e)
         {
             FindURL();
         }
 
+        // Call findButton when btnCheckHeading clicks on btnCheckHeading
         private void btnCheckHeading_Click(object sender, EventArgs e)
         {
             FindButton();
         }
 
+        // opens the frm SiteAdd passing the value of txtNextId plus one, also the button no if user check a button
         private void btnAdd_Click(object sender, EventArgs e)
         {
             NextSite = Convert.ToInt32(txtNextId.Text) + 1;
+            if (String.IsNullOrEmpty(txtButtonNo.Text))
+            {
+                PassButton = "0";
+            }
+            else
+            {
+                PassButton = txtButtonNo.Text.ToString();
+            }
             PassButton = txtButtonNo.Text.ToString();
             SiteAdd frm = new SiteAdd();
             frm.Show();
         }
 
-               private void btnup_Click(object sender, EventArgs e)
+        // opens the form siteupade and passes the Value of site to update.
+        private void btnup_Click(object sender, EventArgs e)
         {
-            PassValue = txtUpdateNo.Text;
-          //  frmUpdateSite frm = new frmUpdateSite();
-          //  frm.Show();
+            if (string.IsNullOrEmpty(txtUpdateNo.Text))
+            {
+                PassValue = "0";
+            }
+            else
+            {
+                PassValue = txtUpdateNo.Text;
+            }
+            
+            SiteUpdate frm = new SiteUpdate();
+            frm.Show();
         }
 
+        // closes this form
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        public void UpdateId()
-        {
-            txtNextId.Text = StoredProc.CountSite();
-        }
-
+        // Manualy updates the last id number calls UpdateId()
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             UpdateId();
         }
 
+        // Calls the stored Procedure Countsite returns the last site id.
+        public void UpdateId()
+        {
+            txtNextId.Text = StoredProc.CountSite();
+        }
         public void FindButton()
         {
             txtButtonName.Text = StoredProc.GetButtonHeading(txtButtonNo.Text);
         }
 
+        // checks and return if char in txtURLInput are in site info database
         public void FindURL()
         {
             txtURLOutput.Text = "";
@@ -104,6 +127,8 @@ namespace Newmypocket
             }
 
         }
+
+        // // checks and return if char in txtCheckName are in site info database
         public void FindName()
         {
             txtNameOutput.Text = "";

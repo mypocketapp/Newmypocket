@@ -163,6 +163,7 @@ namespace Newmypocket
             this.txtSiteId.Size = new System.Drawing.Size(100, 20);
             this.txtSiteId.TabIndex = 12;
             this.txtSiteId.TextChanged += new System.EventHandler(this.txtSiteId_TextChanged);
+            this.txtSiteId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSiteId_KeyPress);
             // 
             // txtStoreId
             // 
@@ -171,6 +172,7 @@ namespace Newmypocket
             this.txtStoreId.Size = new System.Drawing.Size(100, 20);
             this.txtStoreId.TabIndex = 13;
             this.txtStoreId.TextChanged += new System.EventHandler(this.txtStoreId_TextChanged);
+            this.txtStoreId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStoreId_KeyPress);
             // 
             // txtFullName
             // 
@@ -178,6 +180,7 @@ namespace Newmypocket
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(100, 20);
             this.txtFullName.TabIndex = 14;
+            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
             // 
             // txtAffilate
             // 
@@ -185,6 +188,7 @@ namespace Newmypocket
             this.txtAffilate.Name = "txtAffilate";
             this.txtAffilate.Size = new System.Drawing.Size(100, 20);
             this.txtAffilate.TabIndex = 15;
+            this.txtAffilate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAffilate_KeyPress);
             // 
             // txtSiteURL
             // 
@@ -192,6 +196,7 @@ namespace Newmypocket
             this.txtSiteURL.Name = "txtSiteURL";
             this.txtSiteURL.Size = new System.Drawing.Size(100, 20);
             this.txtSiteURL.TabIndex = 16;
+            this.txtSiteURL.TextChanged += new System.EventHandler(this.txtSiteURL_TextChanged);
             // 
             // txtShow
             // 
@@ -199,6 +204,7 @@ namespace Newmypocket
             this.txtShow.Name = "txtShow";
             this.txtShow.Size = new System.Drawing.Size(100, 20);
             this.txtShow.TabIndex = 17;
+            this.txtShow.TextChanged += new System.EventHandler(this.txtShow_TextChanged);
             // 
             // btnAdd
             // 
@@ -208,6 +214,7 @@ namespace Newmypocket
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnExit
             // 
@@ -217,6 +224,7 @@ namespace Newmypocket
             this.btnExit.TabIndex = 19;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblWord
             // 
