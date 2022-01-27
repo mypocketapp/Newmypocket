@@ -104,11 +104,12 @@ public static class dataaccess
         int affectedRows = -1;
         MySqlConnection connection = new MySqlConnection(connStr);
         // exexcute the command making sure the connection gets closed
-
+        command.Connection = connection;
+       
         try
         {
             // open the connection
-            command.Connection.Open();
+            connection.Open();
             // execute the command and get the number of affected rows
             affectedRows = command.ExecuteNonQuery();
 

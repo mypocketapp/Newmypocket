@@ -100,6 +100,7 @@ namespace Newmypocket
                 MessageBox.Show("Value needs to be a 0 or 1");
                 ShowOk = false;
             }
+            CheckBtn();
         }
 
         // check if the button number is vaild
@@ -121,6 +122,35 @@ namespace Newmypocket
                 StoreIdOk = true;
             }
             CheckBtn();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string Idin = lblId.Text;
+            string SiteIdIn = txtSiteId.Text;
+            string StoreId = txtStoreId.Text;
+            string FullName = txtFullName.Text;
+            string AffiateIn = txtAffilate.Text;
+            string SiteURL = txtSiteURL.Text;
+            string ShowSiteIn = txtShow.Text;
+
+            bool result = StoredProc.AddNewSite(Idin, SiteIdIn, StoreId, FullName, AffiateIn, SiteURL, ShowSiteIn);
+
+            if (result == true)
+            {
+                MessageBox.Show("Your site is added");
+
+            }
+            else
+            {
+                MessageBox.Show("Error Adding you site");
+            }
+        }
+
+        // closes this form
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         // makes sure the Wordpress site number not already used
@@ -202,11 +232,7 @@ namespace Newmypocket
             }
         }
 
-        // closes this form
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+      
 
         // checks for numbers only on txtStoreId
         private void txtStoreId_KeyPress(object sender, KeyPressEventArgs e)
@@ -227,17 +253,6 @@ namespace Newmypocket
             }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            string Idin = lblId.Text;
-            string SiteIdIn = txtSiteId.Text;
-            string StoreId = txtStoreId.Text;
-            string FullName = txtFullName.Text;
-            string AffiateIn = txtAffilate.Text;
-            string SiteURL = txtSiteURL.Text;
-            string ShowSiteIn = txtShow.Text;
-
-            StoredProc.AddNewSite(Idin, SiteIdIn, StoreId, FullName, AffiateIn, SiteURL, ShowSiteIn);
-        }
+       
     }
 }

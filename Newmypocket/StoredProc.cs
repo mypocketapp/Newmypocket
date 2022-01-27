@@ -195,7 +195,7 @@ namespace Newmypocket
             comm.CommandText = "AddSite";
             comm.Parameters.Add("@IdIn", MySqlDbType.Int32).Value = IdIn;
             comm.Parameters.Add("@SiteIdIn", MySqlDbType.Int32).Value = SiteIdIn;
-            comm.Parameters.Add("@StoreId", MySqlDbType.Int32).Value = StoreId;
+            comm.Parameters.Add("@StoreIdIn", MySqlDbType.Int32).Value = StoreId;
             comm.Parameters.Add("@FullNameIn", MySqlDbType.String).Value = FullNameIn;
             comm.Parameters.Add("@AffiliateIn", MySqlDbType.Int32).Value = AffiliateIn;
             comm.Parameters.Add("@SiteURLIn", MySqlDbType.String).Value = SiteUrlIn;
@@ -223,7 +223,7 @@ namespace Newmypocket
             comm.CommandType = CommandType.StoredProcedure;
             comm.CommandText = "UpdateSite";
             comm.Parameters.Add("@IdIn", MySqlDbType.Int32).Value = IdIn;
-            comm.Parameters.Add("@StoreId", MySqlDbType.Int32).Value = StoreIdIn;
+            comm.Parameters.Add("@StoreIdIn", MySqlDbType.Int32).Value = StoreIdIn;
             comm.Parameters.Add("@FullNameIn", MySqlDbType.String).Value = FullNameIn;
             comm.Parameters.Add("@AffiliateIn", MySqlDbType.Int32).Value = AffiliateIn;
             comm.Parameters.Add("@SiteURLIn", MySqlDbType.String).Value = SiteUrlIn;

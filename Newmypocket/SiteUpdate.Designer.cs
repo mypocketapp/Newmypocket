@@ -48,6 +48,10 @@ namespace Newmypocket
             this.btnCancal = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.txtButtonName = new System.Windows.Forms.TextBox();
+            this.lblUrl = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblAffiate = new System.Windows.Forms.Label();
+            this.lblShow = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -134,6 +138,7 @@ namespace Newmypocket
             // 
             this.txtSiteId.Location = new System.Drawing.Point(501, 83);
             this.txtSiteId.Name = "txtSiteId";
+            this.txtSiteId.ReadOnly = true;
             this.txtSiteId.Size = new System.Drawing.Size(100, 20);
             this.txtSiteId.TabIndex = 9;
             // 
@@ -143,6 +148,8 @@ namespace Newmypocket
             this.txtButtonNumber.Name = "txtButtonNumber";
             this.txtButtonNumber.Size = new System.Drawing.Size(100, 20);
             this.txtButtonNumber.TabIndex = 10;
+            this.txtButtonNumber.TextChanged += new System.EventHandler(this.txtButtonNumber_TextChanged);
+            this.txtButtonNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtButtonNumber_KeyPress);
             // 
             // txtSiteURL
             // 
@@ -150,6 +157,7 @@ namespace Newmypocket
             this.txtSiteURL.Name = "txtSiteURL";
             this.txtSiteURL.Size = new System.Drawing.Size(100, 20);
             this.txtSiteURL.TabIndex = 11;
+            this.txtSiteURL.TextChanged += new System.EventHandler(this.txtSiteURL_TextChanged);
             // 
             // txtFullName
             // 
@@ -157,6 +165,7 @@ namespace Newmypocket
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(100, 20);
             this.txtFullName.TabIndex = 12;
+            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
             // 
             // txtAffiate
             // 
@@ -164,6 +173,8 @@ namespace Newmypocket
             this.txtAffiate.Name = "txtAffiate";
             this.txtAffiate.Size = new System.Drawing.Size(100, 20);
             this.txtAffiate.TabIndex = 13;
+            this.txtAffiate.TextChanged += new System.EventHandler(this.txtAffiate_TextChanged);
+            this.txtAffiate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAffiate_KeyPress);
             // 
             // txtShow
             // 
@@ -171,6 +182,9 @@ namespace Newmypocket
             this.txtShow.Name = "txtShow";
             this.txtShow.Size = new System.Drawing.Size(100, 20);
             this.txtShow.TabIndex = 14;
+            this.txtShow.TextChanged += new System.EventHandler(this.txtShow_TextChanged);
+            this.txtShow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtShow_KeyPress);
+            this.txtShow.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtShow_KeyUp);
             // 
             // btnUpdate
             // 
@@ -180,6 +194,7 @@ namespace Newmypocket
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCancal
             // 
@@ -189,6 +204,7 @@ namespace Newmypocket
             this.btnCancal.TabIndex = 16;
             this.btnCancal.Text = "Cancal";
             this.btnCancal.UseVisualStyleBackColor = true;
+            this.btnCancal.Click += new System.EventHandler(this.btnCancal_Click);
             // 
             // btnCheck
             // 
@@ -198,6 +214,7 @@ namespace Newmypocket
             this.btnCheck.TabIndex = 17;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // txtButtonName
             // 
@@ -205,12 +222,53 @@ namespace Newmypocket
             this.txtButtonName.Name = "txtButtonName";
             this.txtButtonName.Size = new System.Drawing.Size(100, 20);
             this.txtButtonName.TabIndex = 18;
+            this.txtButtonName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtButtonName_KeyPress);
+            // 
+            // lblUrl
+            // 
+            this.lblUrl.AutoSize = true;
+            this.lblUrl.Location = new System.Drawing.Point(640, 179);
+            this.lblUrl.Name = "lblUrl";
+            this.lblUrl.Size = new System.Drawing.Size(35, 13);
+            this.lblUrl.TabIndex = 19;
+            this.lblUrl.Text = "label9";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(643, 211);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(41, 13);
+            this.lblName.TabIndex = 20;
+            this.lblName.Text = "label10";
+            // 
+            // lblAffiate
+            // 
+            this.lblAffiate.AutoSize = true;
+            this.lblAffiate.Location = new System.Drawing.Point(643, 245);
+            this.lblAffiate.Name = "lblAffiate";
+            this.lblAffiate.Size = new System.Drawing.Size(41, 13);
+            this.lblAffiate.TabIndex = 21;
+            this.lblAffiate.Text = "label11";
+            // 
+            // lblShow
+            // 
+            this.lblShow.AutoSize = true;
+            this.lblShow.Location = new System.Drawing.Point(643, 278);
+            this.lblShow.Name = "lblShow";
+            this.lblShow.Size = new System.Drawing.Size(41, 13);
+            this.lblShow.TabIndex = 22;
+            this.lblShow.Text = "label12";
             // 
             // SiteUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblShow);
+            this.Controls.Add(this.lblAffiate);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblUrl);
             this.Controls.Add(this.txtButtonName);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.btnCancal);
@@ -232,6 +290,7 @@ namespace Newmypocket
             this.Controls.Add(this.label1);
             this.Name = "SiteUpdate";
             this.Text = "SiteUpdate";
+            this.Load += new System.EventHandler(this.SiteUpdate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +317,9 @@ namespace Newmypocket
         private System.Windows.Forms.Button btnCancal;
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.TextBox txtButtonName;
+        private System.Windows.Forms.Label lblUrl;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblAffiate;
+        private System.Windows.Forms.Label lblShow;
     }
 }
